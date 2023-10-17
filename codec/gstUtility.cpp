@@ -413,7 +413,7 @@ bool gst_build_filesink( const URI& uri, videoOptions::Codec codec, std::ostring
 	else if( uri.extension == "mp4" || uri.extension == "qt" )
 	{
 		ADD_CODEC_PARSER();
-		pipeline << "qtmux ! ";
+		pipeline << "mpegtsmux ! ";
 	}
 	else if( uri.extension != "h264" && uri.extension != "h265" )
 	{
